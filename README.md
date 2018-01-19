@@ -1,1 +1,1 @@
-# nlp-sql-interpreter
+# SpeaQL
