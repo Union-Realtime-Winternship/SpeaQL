@@ -18,7 +18,7 @@ const tableSpecs = [
 ];
 
 var headers = {
-    'Authorization': 'Bearer ab74b3a10ba84131b712203b6304e877'
+    'Authorization': ''
 }
 
 function getDatabaseValues(table, column, pool) {
@@ -61,7 +61,7 @@ function processTableSpecs(pool) {
 
                 // send to dialogflow
                 request.put({
-                    url: "https://api.dialogflow.com/v1/entities?20150910",
+                    url: "link",
                     headers: headers,
                     json: objectToSend
                 },
@@ -88,7 +88,7 @@ function processTableSpecs(pool) {
     })
 }
 
-sql.connect("mssql://winternsadmin:January999!@urtinterns.database.windows.net/adventureworks?encrypt=true")
+sql.connect("mssql:")
     .then(pool => {
         processTableSpecs(pool);
     });
